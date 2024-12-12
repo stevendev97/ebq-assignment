@@ -5,3 +5,33 @@
 /* Footer bg-color & Second CTA text #0A459E */
 /* Second CTA #FFBE3B */
 
+* {
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem;
+    background-color: #EBF4FF;
+}
+
+.logo-container {
+    width: 35%;
+}
+
+.logo-container img {
+    width: 100%;
+}
+
+header button {
+    font-size: 2rem;
+    width: 50%;
+    font: normal normal bold Open Sans;
+    padding: 2rem;
+    border-radius: 50px;
+    background-color: #2979ED ;
+    border: none;
+    color: #FFFF;
+}
