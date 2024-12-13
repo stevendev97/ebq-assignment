@@ -14,7 +14,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 3rem;
+    padding: 1rem;
     background-color: #EBF4FF;
 }
 
@@ -27,12 +27,12 @@ header {
 }
 
 button {
-    font-size: 2.5rem;
-    font-weight: 400;
-    width: 50%;
-    padding: 2rem;
+    font-size: .8rem;
+    font-weight: bold;
+    padding: .5rem 1.5rem;
     border-radius: 50px;
     border: none;
+    cursor: pointer;
 }
 
 header button {
@@ -41,40 +41,36 @@ header button {
 }
 
 .marketing-services-section {
-    padding: 10rem 3rem;
+    padding: 4rem 1rem;
     background-color: #EBF4FF;
 }
 
 .marketing-services-section h1 {
-    font-size: 9rem;
+    font-size: 2.5rem;
     text-align: center;
     font-weight: lighter;
     line-height: 1;
+    padding-bottom: 1rem;
 }
 
 p {
-    font-size: 2.5rem;
+    font-size: 1rem;
     text-align: center;
-    padding: 1rem;
-    line-height: 1.2;
-
-}
-
-.two-column-section h2, footer h2 {
-    padding: 3rem;
-    font-size: 7rem;
-    text-align: center;
-    font-weight: lighter;
-    line-height: 1;
 }
 
 .two-column-section {
-    padding: 10rem 3rem;
+    padding: 1.5rem 1rem;
 }
 
 .two-column-section .img-container {
     width: 100%;
-    padding: 8rem 0;
+    padding: 2rem 0;
+}
+
+.two-column-section h2, footer h2 {
+    font-size: 2.2rem;
+    text-align: center;
+    font-weight: lighter;
 }
 
 .two-column-section .img-container img {
@@ -82,7 +78,7 @@ p {
 }
 
 footer {
-    padding: 10rem 3rem;
+    padding: 5rem 1rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -92,7 +88,161 @@ footer {
 }
 
 footer button {
-    margin-top: 4rem;
+    margin-top: 2rem;
     background-color: #FFBE3B;
     color: #0A459E;
+    font-weight: bold;
+}
+
+
+@media (min-width: 481px) {
+    p {
+        font-size: .8rem;
+        text-align: left;
+    }
+
+    .logo-container {
+        width: 15%;
+    }
+
+    button {
+        font-size: .6rem;
+        border-radius: 50px;
+        border: none;
+    }
+
+    .marketing-services-section {
+        padding: 2.5rem 4rem;
+    }
+    
+    .marketing-services-section h1 {
+        font-size: 1.8rem;
+        width: 60%;
+        text-align: left;
+    }
+
+    .marketing-services-section p {
+        width: 70%;
+    }
+    
+    .two-column-section {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        padding: 2rem 3rem;
+        gap: 1rem;
+    }
+
+    .two-column-section .left {
+        flex: 1;
+    }
+
+    .two-column-section .right {
+        flex: 1;
+    }
+
+    .two-column-section h2, footer h2 {
+        font-size: 1.2rem;
+        text-align: left;
+    }
+
+    .two-column-section h2 {
+        margin-bottom: 1rem;
+    }
+    
+    .two-column-section .img-container img {
+        width: 100%;
+    }
+
+
+}
+
+@media (min-width: 769px) {
+    p {
+        font-size: 1rem;
+        text-align: left;
+    }
+
+    button {
+        font-size: .8rem;
+        padding: .5rem 1.5rem;
+    }
+
+    header {
+        padding: 0 2rem;
+    }
+    .logo-container {
+        width: 10%;
+        max-width: 100px;
+    }
+
+    .marketing-services-section {
+        padding: 6rem 8rem;
+    }
+    
+    .marketing-services-section h1 {
+        font-size: 2.2rem;
+        width: 45%;
+    }
+
+    .marketing-services-section p {
+        width: 55%;
+    }
+
+
+    .two-column-section {
+        padding: 6rem 8rem;
+        gap: 3rem;
+    }
+
+    .two-column-section h2, footer h2 {
+        font-size: 2rem;
+    }
+
+    .two-column-section h2 {
+        margin-bottom: 1rem;
+    }
+
+}
+
+@media(min-width: 1024px) {
+    p {
+        font-size: 1.2rem;
+    }
+/* 
+    button {
+        font-size: .8rem;
+        padding: .5rem 1.5rem;
+    } */
+
+    /* header {
+        padding: 0 2rem;
+    }
+     */
+
+    .marketing-services-section {
+        padding: 8rem 9rem;
+    }
+    
+    .marketing-services-section h1 {
+        font-size: 3.2rem;
+        width: 37%;
+    }
+
+    .marketing-services-section p {
+        width: 50%;
+    }
+
+    .two-column-section {
+        padding: 8rem 9rem;
+        gap: 3rem;
+    }
+
+    .two-column-section h2, footer h2 {
+        font-size: 2rem;
+    }
+
+    .two-column-section h2 {
+        margin-bottom: 1rem;
+    }
 }
