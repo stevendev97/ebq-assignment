@@ -1,73 +1,129 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Landing Page</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link rel="stylesheet" href="styles.css">
-	</head>
 
-	<body>
-		<!--Page Content-->
-		<header>
-			<div class="logo-container">
-				<img alt="ebq-logo" src="/assets/logo-blue-160x160-1.png" />
-			</div>
-			<button>CONTACT US</button>
-		</header>
+<head>
+	<title>Landing Page</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+</head>
 
-		<div class="marketing-services-section">
-			<h1>Integrated <strong>Marketing Services</strong></h1>
+<body>
+	<!--Page Content-->
+	<header>
+		<div class="logo-container">
+			<img alt="ebq-logo" src="/assets/logo-blue-160x160-1.png" />
+		</div>
+		<button class="open-popup">CONTACT US</button>
+	</header>
+
+	<div class="marketing-services-section">
+		<h1>Integrated <strong>Marketing Services</strong></h1>
+		<p>
+			We turn your marketing plans into action by building on your ideas and executing initiatives alongside you
+			and your team.
+			Get a complete department that can pivot to different areas of marketing based on your needs.
+		</p>
+	</div>
+
+	<div class="two-column-section">
+		<div class="img-container left">
+			<img alt="Marketing_Tools" src="/assets/Marketing_Tools.svg" />
+		</div>
+
+		<div class="right">
+			<h2>
+				We’re experts with <strong>modern marketing tools,</strong> so you don’t have to be!
+			</h2>
 			<p>
-				We turn your marketing plans into action by building on your ideas and executing initiatives alongside you and your team. 
-				Get a complete department that can pivot to different areas of marketing based on your needs.
+				With hands-on experience in B2B’s most innovative apps and tools, we take a data-driven approach to
+				continually improve prospect engagement. Whether we work directly out of your platform or provide our
+				insights manually, you always get full visibility into the process.
 			</p>
 		</div>
 
-		<div class="two-column-section">
-			<div class="img-container left">
-				<img alt="Marketing_Tools" src="/assets/Marketing_Tools.svg" />
-			</div>
+	</div>
 
-			<div class="right">
-				<h2>
-					We’re experts with <strong>modern marketing tools,</strong> so you don’t have to be!
-				</h2>
-				<p>
-					With hands-on experience in B2B’s most innovative apps and tools, we take a data-driven approach to continually improve prospect engagement. Whether we work directly out of your platform or provide our insights manually, you always get full visibility into the process.
-				</p>
-			</div>
-
-		</div>
-
-		<div class="two-column-section">
-			<div class="left">
-				<h2>
-					<strong>The best way</strong> to build a marketing team
-				</h2>
-				<p>
-					With EBQ, you’re not just hiring a marketing specialist. You’re getting an entire marketing department at a fraction of the cost and effort of hiring internally. 
-				</p>
-				</br>
-				<p>
-					For each project, we provide: a Success Manager to drive high-level strategy, a Project Manager to oversee day-to-day operations, and one or more Specialists working diligently to amplify your brand.
-				</p>
-			</div>
-
-			<div class="img-container right">
-				<img alt="Marketing_Tools" src="/assets/Complete-Department-Marketing.png" />
-			</div>
-
-		</div>
-
-		<footer>
+	<div class="two-column-section">
+		<div class="left">
 			<h2>
-				Looking to take your <strong>marketing to the next level?</strong>
+				<strong>The best way</strong> to build a marketing team
 			</h2>
-			<button>CONTACT US</button>
-		</footer>
+			<p>
+				With EBQ, you’re not just hiring a marketing specialist. You’re getting an entire marketing department
+				at a fraction of the cost and effort of hiring internally.
+			</p>
+			</br>
+			<p>
+				For each project, we provide: a Success Manager to drive high-level strategy, a Project Manager to
+				oversee day-to-day operations, and one or more Specialists working diligently to amplify your brand.
+			</p>
+		</div>
 
-		<script type="text/javascript">
-			// Event listener JS goes here
-		</script>
-	</body>
+		<div class="img-container right">
+			<img alt="Marketing_Tools" src="/assets/Complete-Department-Marketing.png" />
+		</div>
+
+	</div>
+
+	<footer>
+		<h2>
+			Looking to take your <strong>marketing to the next level?</strong>
+		</h2>
+		<button class="open-popup">CONTACT US</button>
+	</footer>
+
+	<!-- pop up -->
+	<!-- pop up -->
+	<!-- pop up -->
+
+	<div id="popup" class="hidden">
+		<div class="popup-content">
+			<span id="closePopup" class="close-btn">&times;</span>
+			<h2>Fill in Your Details</h2>
+			<form id="popupForm">
+				<div>
+					<label for="firstName">First Name:</label>
+					<input type="text" id="firstName" name="firstName" required>
+				</div>
+				<div>
+					<label for="lastName">Last Name:</label>
+					<input type="text" id="lastName" name="lastName" required>
+				</div>
+				<div>
+					<label for="email">Email:</label>
+					<input type="email" id="email" name="email" required>
+				</div>
+				<button type="submit" id="sendButton">Send</button>
+			</form>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		const openPopupButtons = document.querySelectorAll('.open-popup'); 
+		const popup = document.getElementById('popup');
+		const closePopupButton = document.getElementById('closePopup');
+		const popupForm = document.getElementById('popupForm');
+
+		const showPopup = () => {
+			popup.classList.remove('hidden'); 
+		};
+
+		const hidePopup = () => {
+			popup.classList.add('hidden'); 
+		};
+
+		openPopupButtons.forEach((button) => {
+			button.addEventListener('click', showPopup);
+		});
+
+		closePopupButton.addEventListener('click', hidePopup);
+
+		popupForm.addEventListener('submit', (event) => {
+			event.preventDefault(); 
+			alert('Form submitted successfully!');
+			hidePopup();
+		});
+	</script>
+</body>
+
 </html>
