@@ -7,6 +7,7 @@
 
 * {
     margin: 0;
+    font-family: 'Open Sans';
 }
 
 header {
@@ -25,13 +26,73 @@ header {
     width: 100%;
 }
 
-header button {
-    font-size: 2rem;
+button {
+    font-size: 2.5rem;
+    font-weight: 400;
     width: 50%;
-    font: normal normal bold Open Sans;
     padding: 2rem;
     border-radius: 50px;
-    background-color: #2979ED ;
     border: none;
+}
+
+header button {
+    background-color: #2979ED;
     color: #FFFF;
+}
+
+.marketing-services-section {
+    padding: 10rem 3rem;
+    background-color: #EBF4FF;
+}
+
+.marketing-services-section h1 {
+    font-size: 9rem;
+    text-align: center;
+    font-weight: lighter;
+    line-height: 1;
+}
+
+p {
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 1rem;
+    line-height: 1.2;
+
+}
+
+.two-column-section h2, footer h2 {
+    padding: 3rem;
+    font-size: 7rem;
+    text-align: center;
+    font-weight: lighter;
+    line-height: 1;
+}
+
+.two-column-section {
+    padding: 10rem 3rem;
+}
+
+.two-column-section .img-container {
+    width: 100%;
+    padding: 8rem 0;
+}
+
+.two-column-section .img-container img {
+    width: 100%;
+}
+
+footer {
+    padding: 10rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #0A459E;
+    color: #FFFF;
+}
+
+footer button {
+    margin-top: 4rem;
+    background-color: #FFBE3B;
+    color: #0A459E;
 }
